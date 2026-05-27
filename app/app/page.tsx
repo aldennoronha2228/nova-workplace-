@@ -1,5 +1,9 @@
-import { redirect } from "next/navigation";
+import HeroCard from "../components/landing/HeroCard";
 
 export default function Home() {
-  redirect("/workspace");
+  return (
+    <main className="flex-1">
+      <HeroCard />
+    </main>
+  );
 }
