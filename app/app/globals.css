@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0f141a;
+  --foreground: #dfe6ee;
+  --surface: #121820;
+  --surface-container-highest: #222c3a;
+  --surface-container-high: #1c2430;
+  --surface-bright: #2a3442;
+  --surface-variant: #2b3441;
+  --muted: #98a3b4;
+  --accent: #7fa8ff;
+  --radius: 8px;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-heading: "Sora", var(--font-sans);
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono", "Noto Sans Mono";
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .dot-grid {
+    background-color: transparent;
+    background-image: radial-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), radial-gradient(rgba(255,255,255,0.008) 1px, transparent 1px);
+    background-size: 32px 32px, 8px 8px;
+    background-position: 0 0, 0 0;
+  }
+
+  .glass-panel {
+    background: rgba(12, 16, 22, 0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 10px 30px rgba(2, 6, 12, 0.6);
+    border-radius: var(--radius);
+  }
+
+  .wire-path {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .wire-path-animated {
+    stroke-dasharray: 4 4;
+    animation: dash 15s linear infinite;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -500;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #414755;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c1c6d7;
+}
