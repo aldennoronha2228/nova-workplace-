@@ -84,3 +84,79 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #c1c6d7;
 }
+
+/* ---------- Landing styles (namespaced) ---------- */
+.landing-namespace {
+  --ln-bg: #0a0a0f;
+  --ln-surface: #111118;
+  --ln-text: #f0f0f5;
+  --ln-text-muted: #8888a8;
+  --ln-accent: #c8a0e0;
+  --ln-border: rgba(255,255,255,0.08);
+}
+
+.landing-namespace .hero-card {
+  width: 100%;
+  max-width: 1600px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+  position: relative;
+  background: #0d0b12;
+  padding: 80px 40px 70px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.landing-namespace .hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.landing-namespace .hero-badge {
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--ln-text-muted);
+  margin-bottom: 12px;
+}
+
+.landing-namespace .hero-heading-new {
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--ln-text);
+  margin-bottom: 20px;
+}
+
+.landing-namespace .hero-heading-italic {
+  font-style: italic;
+}
+
+.landing-namespace .hero-prompt-wrap {
+  width: 100%;
+  max-width: 920px;
+  z-index: 2;
+}
+
+/* buttons used by the ported PromptInputBox */
+.landing-namespace input {
+  background: #111217;
+  border: 1px solid rgba(255,255,255,0.04);
+  color: var(--ln-text);
+}
+
+.landing-namespace .btn-generate {
+  background: linear-gradient(90deg,#c8a0e0,#b04090);
+  color: white;
+}
+
+/* end landing styles */
