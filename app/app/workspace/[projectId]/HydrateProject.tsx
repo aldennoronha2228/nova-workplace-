@@ -1,6 +1,6 @@
 "use client";
 import { useEffect } from "react";
-import useGlobalStore from "../../../../store/useGlobalStore";
+import useGlobalStore from "../../../store/useGlobalStore";
 
 export default function HydrateProject({ projectId }: { projectId: string }) {
   const projectPrompt = useGlobalStore((s) => s.projectPrompt);
